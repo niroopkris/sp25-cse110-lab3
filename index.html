@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Meeting Minutes</title>
+    <link href="images/favicon.svg" rel="icon" />
+</head>
+<body>
+    <header>
+        <div id = "header-nav">
+            <nav>
+            <!--Navigation Bar-->
+                <a href="#title">Title</a>
+                <a href="#info">Info</a>
+                <a href="#misc">Miscellaneous</a>
+                <a href="#recordings">Recordings</a>
+                <a href="#form">Form</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!--Title and subtitles (date, topic) section-->
+        <section id = "title">
+            <h1>Card Game Application Brainstorm</h1>
+            <h2>Admin Brainstorm Meeting</h2>
+            <h3>Date: 4/15/2025</h2>
+            <hr>
+        </section>
+        <section id = "info">
+            <h2>Attendance</h2>
+            <p>Bob, John, Jenny, Batman</p>
+
+            <h2>Agenda</h2>
+            <ul>
+                <li>Decide which card game to focus on</li>
+                <li>Create <span>application blueprint</span></li>
+                <li><strong>Decide Roles</strong></li>
+            </ul>
+
+            <h2>Unfinished Business from Last Meeting</h2>
+                <ul>
+                    <li>Discuss alternatives to making a card game application</li>
+                    <li>Determine how many <b>licks</b> it takes to get to the <i>center</i> of a lolipop</li>
+                </ul>
+
+            <h2>New Business</h2>
+                <ol>
+                    <li>Reflect on the state of our economy</li>
+                    <li><em>Discuss the future of our team and company</em></li>
+                </ol>
+
+            <h2>Diagrams and Pictures</h2>
+                <img src="images/team.jpeg" alt="diagram of application" height="300px">
+            <hr>
+        </section>
+        <section id = "misc">
+            <h2>Miscellaneous Comments/Questions/Concerns</h2>
+            <details>
+                <summary>
+                  What should I do if I find I don't like my role or am better at something else?
+                </summary>
+                Talk to a project lead and they'll figure it out with your team.
+              </details>
+            <hr>
+        </section>
+
+        <section id = "recordings">
+            <h2>Audio Recording</h2>
+            <audio controls src="audio/seal.mp3"></audio>
+            <h2>Video Recording</h2>
+            <video controls width = "250px">
+                <source src="videos/seal.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <section id = "form">
+            <h2>Contact Us</h2>
+            <form action="https://httpbin.org/post" method="POST">
+                <label for="name">Name: </label> 
+                <input type="text" id="name" name="name"><br>
+                <label for="age">Above 18: </label> 
+                <input type="checkbox" id="age" name="age"><br>
+                <label for="date">Date: </label> 
+                <input type="date" id="date" name="date"><br>
+                <fieldset>
+                    <legend>Select your favorite color:</legend>
+                    <input type="radio" id="blue" name="color" value="blue"/>
+                    <label for="blue">Blue</label> 
+
+                    <input type="radio" id="green" name="color" value="green" />
+                    <label for="green">Green</label>
+                
+                    <input type="radio" id="red" name="color" value="red" />
+                    <label for="red">Red</label>
+                </fieldset>
+
+                <label for="occupation">Your occupation:</label>
+                <input list="occupations" id="occupation" name="occupation" />
+                <datalist id="occupation">
+                    <option value="CS"></option>
+                    <option value="Biomed"></option>
+                    <option value="Engineering"></option>
+                    <option value="Art"></option>
+                    <option value="Other"></option>
+                </datalist>
+                <br>
+
+                <label>Do you like our company?</label> 
+                <select>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+                <br>
+        
+                <label>Please provide any feedback:</label>
+                <textarea rows="2" cols="20"></textarea>
+                <button>Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <hr/>
+        <address>
+            <small>
+                Made by <a href="mailto:niroopkris@gmail.com">Niroop Krishnakumar</a>.<br>
+                Located at UC San Diego
+            </small>
+        </address>
+    </footer>
+
+</body>
+</html>
