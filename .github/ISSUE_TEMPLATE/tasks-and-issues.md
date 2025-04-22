@@ -2,8 +2,7 @@
 name: Tasks and Issues
 about: Provide any tasks to finish or issues to resolve!
 title: ''
-labels: bug, documentation, duplicate, enhancement, good first issue, help wanted,
-  invalid, question, validator, wontfix
+labels: ''
 assignees: ''
 
 ---
