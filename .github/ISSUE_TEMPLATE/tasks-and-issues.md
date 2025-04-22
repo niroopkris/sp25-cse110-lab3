@@ -15,4 +15,4 @@ A clear and concise description of what the task/issue involves.
 A clear and concise description of how to reproduce the issue and what you expected to happen.
 
 **Additional context**
-Add any other context about the problem here.
+Add any other context about the task/issue here.
