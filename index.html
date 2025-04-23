@@ -5,77 +5,89 @@
     <meta name="viewport" content="width=device-width">
     <title>Meeting Minutes</title>
     <link href="images/favicon.svg" rel="icon" />
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <style>
+        body {
+          background-color: rgb(255, 245, 245);
+        }
+    </style>
 </head>
-<body>
+<body class = "container">
     <header>
-        <div id = "header-nav">
-            <nav>
-            <!--Navigation Bar-->
-                <a href="#title">Title</a>
-                <a href="#info">Info</a>
-                <a href="#misc">Miscellaneous</a>
-                <a href="#recordings">Recordings</a>
-                <a href="#form">Form</a>
-            </nav>
-        </div>
+        <nav>
+        <!--Navigation Bar-->
+            <a href="#title">Title</a>
+            <a href="#attendance">Info</a>
+            <a href="#diagrams">Diagrams</a>
+            <a href="#misc">Miscellaneous</a>
+            <a href="#recordings">Recordings</a>
+        </nav>
     </header>
 
-    <main>
+    <main class = "flexbox">
         <!--Title and subtitles (date, topic) section-->
-        <section id = "title">
+        <section class = "cell" id = "title">
             <h1>Card Game Application Brainstorm</h1>
             <h2>Admin Brainstorm Meeting</h2>
             <h3>Date: 4/15/2025</h3>
             <hr>
         </section>
-        <section id = "info">
+        <section class = "cell" id = "attendance">
             <h2>Attendance</h2>
             <p>Bob, John, Jenny, Batman</p>
-
+        </section>
+        <section class = "cell" id = "agenda">
             <h2>Agenda</h2>
             <ul>
                 <li>Decide which card game to focus on</li>
                 <li>Create <span>application blueprint</span></li>
-                <li><strong>Decide Roles</strong></li>
+                <li style="color:#ff0606""><strong>Decide Roles</strong></li>
             </ul>
-
-            <h2>Unfinished Business from Last Meeting</h2>
-                <ul>
-                    <li>Discuss alternatives to making a card game application</li>
-                    <li>Determine how many <b>licks</b> it takes to get to the <i>center</i> of a lolipop</li>
-                </ul>
-
-            <h2>New Business</h2>
-                <ol>
-                    <li>Reflect on the state of our economy</li>
-                    <li><em>Discuss the future of our team and company</em></li>
-                </ol>
-
-            <h2>Diagrams and Pictures</h2>
-                <img src="images/team.jpeg" alt="diagram of application" height="300">
-            <hr>
         </section>
-        <section id = "misc">
+        <section class = "cell" id = "oldbusiness">
+            <h2>Unfinished Business from Last Meeting</h2>
+            <ul>
+                <li>Discuss alternatives to making a card game application</li>
+                <li>Determine which days the majority are available to meet in the future</li>
+            </ul>
+        </section>
+        <section class = "cell" id = "newbusiness">
+            <h2>New Business</h2>
+            <ol>
+                <li>Decide on card game and roles</li>
+                <li>Create blueprint for the application</li>
+                <li><em>Discuss the future of our team and company</em></li>
+            </ol>
+        </section>
+        </section>
+        <section class = "cell" id = "diagrams">
+            <h2>Diagrams and Pictures</h2>
+            <img src="images/team.jpeg" alt="diagram of application" height="300">
+        </section>
+        <section class = "cell" id = "misc">
             <h2>Miscellaneous Comments/Questions/Concerns</h2>
             <details>
                 <summary>
                   What should I do if I find I don't like my role or am better at something else?
                 </summary>
-                Talk to a project lead and they'll figure it out with your team.
+                <p>Talk to a project lead and they'll figure it out with your team.</p>
               </details>
-            <hr>
         </section>
 
-        <section id = "recordings">
-            <h2>Audio Recording</h2>
-            <audio controls src="audio/seal.mp3"></audio>
-            <h2>Video Recording</h2>
-            <video controls width = "250">
-                <source src="videos/seal.mp4" type="video/mp4">
-            </video>
-        </section>
+        <section class="cell" id="recordings">
+            <div class="recording-block">
+                <h2>Audio Recording</h2>
+                <audio controls src="audio/seal.mp3"></audio>
+            </div>
+            <div class="recording-block">
+                <h2>Video Recording</h2>
+                <video controls width="250">
+                    <source src="videos/seal.mp4" type="video/mp4">
+                </video>
+            </div>
+          </section>
 
-        <section id = "form">
+        <section class = "cell" id = "form">
             <h2>Contact Us</h2>
             <form action="https://httpbin.org/post" method="POST">
                 <label for="name">Name: </label> 
@@ -83,39 +95,9 @@
                 <label for="age">Above 18: </label> 
                 <input type="checkbox" id="age" name="age"><br>
                 <label for="date">Date: </label> 
-                <input type="date" id="date" name="date"><br>
-                <fieldset>
-                    <legend>Select your favorite color:</legend>
-                    <input type="radio" id="blue" name="color" value="blue"/>
-                    <label for="blue">Blue</label> 
-
-                    <input type="radio" id="green" name="color" value="green" />
-                    <label for="green">Green</label>
-                
-                    <input type="radio" id="red" name="color" value="red" />
-                    <label for="red">Red</label>
-                </fieldset>
-
-                <label for="occupation">Your occupation:</label>
-                <input list="occupations" id="occupation" name="occupation" />
-                <datalist id="occupations">
-                    <option value="CS"></option>
-                    <option value="Biomed"></option>
-                    <option value="Engineering"></option>
-                    <option value="Art"></option>
-                    <option value="Other"></option>
-                </datalist>
-                <br>
-
-                <label>Do you like our company?</label> 
-                <select>
-                    <option>Yes</option>
-                    <option>No</option>
-                </select>
-                <br>
-        
-                <label>Please provide any feedback:</label>
-                <textarea rows="2" cols="20"></textarea>
+                <input type="date" id="date" name="date"><br>        
+                <label for="comments">Comments</label> 
+                <textarea type="text" name="comments" id="comments"></textarea>
                 <button>Submit</button>
             </form>
         </section>
@@ -125,8 +107,7 @@
         <hr/>
         <address>
             <small>
-                Made by <a href="mailto:niroopkris@gmail.com">Niroop Krishnakumar</a>.<br>
-                Located at UC San Diego
+                Made by <a href="mailto:niroopkris@gmail.com">Niroop Krishnakumar</a><br>
             </small>
         </address>
     </footer>
