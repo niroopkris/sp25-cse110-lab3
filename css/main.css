@@ -1,0 +1,211 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Caudex';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/caudex-v17-latin-regular.woff2') format('woff2'); 
+}
+
+@font-face {
+    font-family: 'Caudex';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/caudex-v17-latin-italic.woff2') format('woff2'); 
+}
+
+@font-face {
+    font-family: 'Caudex';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/caudex-v17-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Caudex';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../fonts/caudex-v17-latin-700italic.woff2') format('woff2'); 
+}
+
+
+@media screen and (max-width: 480px) {
+    .flexbox.cell {
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        position: static;
+    }
+
+    nav {
+        flex-flow: row wrap;
+    }
+
+    nav a {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 6px;
+      }
+} 
+
+@media screen and (min-width: 481px) {
+    .flexbox {
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: white; /* Needed if you want it to cover content behind */
+    }
+} 
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    --main-link-color:rgb(210, 0, 140);
+}
+
+nav {
+    display: flex;
+    justify-content:flex-start;
+    padding: 10px;
+    background-color: color-mix(in oklab, #1425a7 75%, white);
+}
+
+.navlink {
+    padding: 3px;
+}
+
+a {
+    margin: 1px 6px;
+    padding: 3px 3px;
+    border-width: 1px;
+    border-style: outset;
+    border-radius: 3px;
+    background-color: rgb(253, 242, 249);
+    text-decoration: none;
+    color: var(--main-link-color);
+}
+
+a:hover, a:active {
+    color: rgb(128, 20, 158);
+    background-color: rgb(255, 243, 221);
+    border-color: gray;
+}
+
+a:visited {
+    color: var(--main-link-color);
+}
+
+body {
+    background-color: white;
+    overflow-x: hidden;
+    font-family: 'Caudex', Courier, monospace;
+    min-height: 100vh;    
+    background-color: white;
+    overflow-x: hidden;
+    font-family: 'Caudex', Courier, monospace;
+}
+
+.flexbox {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
+    align-items: start;
+    flex-grow: 1;
+    
+    padding-bottom: 80px;
+}
+
+.cell {
+    flex: 1;
+    flex-basis: 30%;
+    margin: 10px 10px 20px 10px;
+}
+
+
+hr {
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Caudex', Courier, monospace; 
+    font-size: 2.5rem; 
+    color: hsl(323, 76.40%, 38.20%);
+}
+
+h2 {
+    color: color(srgb 0.2 0.2 0.2);
+    font-size: 1.7em;
+}
+
+h3 {
+    color: color-mix(in oklab,rgb(70, 70, 70) 75%, white);
+}
+
+#title {
+    margin: 10px 10px 5px 10px;
+    width: 100%;
+    max-width: 100%;
+}
+
+audio + h2 {
+    margin-top: 30px;
+}
+
+ul, ol {
+    margin-left: 20px;
+}
+
+summary + p {
+    margin-left: 30px;
+    font-size: 11pt;
+}
+
+#recordings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+  
+.recording-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#form {
+    display: none;
+}
+
+footer {
+    background-color: color-mix(in oklab, #1425a7 75%, white);
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    padding-right: 0px;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    & a, a:hover, a:active, a:visited {
+        background-color: color-mix(in oklab, #1425a7 75%, white);
+        color: gold;
+        border: none;
+        margin: 0cm;
+    }
+}
