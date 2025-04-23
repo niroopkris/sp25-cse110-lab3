@@ -80,7 +80,7 @@ nav {
     display: flex;
     justify-content:flex-start;
     padding: 10px;
-    background-color: color-mix(in oklab, #1425a7 75%, white);
+    background-color: #4e59c1;
 }
 
 .navlink {
@@ -142,7 +142,7 @@ hr {
 h1 {
     font-family: 'Caudex', Courier, monospace; 
     font-size: 2.5rem; 
-    color: hsl(323, 76.40%, 38.20%);
+    color: color-mix(in oklab, hsl(323, 76.40%, 38.20%) 75%, gray);
 }
 
 h2 {
@@ -151,7 +151,7 @@ h2 {
 }
 
 h3 {
-    color: color-mix(in oklab,rgb(70, 70, 70) 75%, white);
+    color: rgb(84, 84, 84);
 }
 
 main > section[id="title"] {
@@ -205,7 +205,7 @@ h2 ~ img {
 }
 
 footer {
-    background-color: color-mix(in oklab, #1425a7 75%, white);
+    background-color: #4e59c1;
     color: white;
     text-align: center;
     padding-top: 5px;
@@ -218,7 +218,7 @@ footer {
     width: 100%;
 
     & a, a:hover, a:active, a:visited {
-        background-color: color-mix(in oklab, #1425a7 75%, white);
+        background-color: #4e59c1;
         color: gold;
         border: none;
         margin: 0cm;
