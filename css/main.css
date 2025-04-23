@@ -154,10 +154,12 @@ h3 {
     color: color-mix(in oklab,rgb(70, 70, 70) 75%, white);
 }
 
-#title {
-    margin: 10px 10px 5px 10px;
-    width: 100%;
-    max-width: 100%;
+section[id="title"] {
+    margin-bottom: 5px;
+}
+
+section {
+    scroll-margin-top: 60px;
 }
 
 audio + h2 {
