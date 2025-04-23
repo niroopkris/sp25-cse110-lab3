@@ -154,7 +154,7 @@ h3 {
     color: color-mix(in oklab,rgb(70, 70, 70) 75%, white);
 }
 
-section[id="title"] {
+main > section[id="title"] {
     margin-bottom: 5px;
 }
 
@@ -162,17 +162,18 @@ section {
     scroll-margin-top: 60px;
 }
 
-audio + h2 {
-    margin-top: 30px;
-}
-
 ul, ol {
     margin-left: 20px;
 }
 
-summary + p {
-    margin-left: 30px;
+li[style] {
+    font-style: italic;
+}
+
+details p {
+    margin-left: 20px;
     font-size: 11pt;
+    color: rgb(45, 45, 45);
 }
 
 #recordings {
@@ -187,6 +188,18 @@ summary + p {
     gap: 0.5rem;
 }
 
+div:has(video) {
+    margin-top: 20px;
+}
+
+h2 + audio {
+    background-color:hsl(323, 76.40%, 38.20%);
+}
+
+h2 ~ img {
+    margin-top: 10px;
+}
+
 #form {
     display: none;
 }
@@ -195,7 +208,7 @@ footer {
     background-color: color-mix(in oklab, #1425a7 75%, white);
     color: white;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-left: 0px;
     padding-bottom: 10px;
     padding-right: 0px;
